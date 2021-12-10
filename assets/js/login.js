@@ -32,7 +32,7 @@ $(function () {
         console.log(44);
         e.preventDefault();
         let data = {username:$('#form_reg [name=uname]').val(),password:$('#form_reg [name=password]').val()}
-        $.post("api/reguser", data, function (res) {
+        $.post("/api/reguser", data, function (res) {
             if (res.status !== 0) {
                 return layer.msg(res.message)
             }
@@ -45,7 +45,7 @@ $(function () {
       e.preventDefault()
       console.log($(this).serialize());
         $.ajax({
-          url: 'api/login',
+          url: '/api/login',
           method: 'POST',
           // 快速获取表单中的数据
           data: $(this).serialize(),
