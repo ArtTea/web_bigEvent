@@ -10,7 +10,7 @@ $(function () {
     })
     // 表单验证
     const form = layui.form
-    var layer=layui.layer
+    let layer=layui.layer
 
     form.verify({
         // 自定义一个pwd的校验规则
