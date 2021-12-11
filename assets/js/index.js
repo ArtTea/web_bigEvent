@@ -31,10 +31,11 @@ function getUserInfo() {
     })
 }
 function renderAvatar(user) {
+    console.log(user.user_pic);
     let name = user.nickname || user.username;
     $(".welcome").html('欢迎您  ' + name);
     if (user.user_pic !== null) {
-        $('.layui-nav-img').arrt('src', user.user_pic).show().siblings('.text-avant').hide();
+        $('.layui-nav-img').attr('src', user.user_pic).show().siblings('.text-avant').hide();
     } else {
         let first = name[0].toUpperCase();
         $('.text-avant').html(first).show().siblings('.layui-nav-img').hide();
