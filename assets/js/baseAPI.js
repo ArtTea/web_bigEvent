@@ -1,6 +1,6 @@
 $.ajaxPrefilter(function (option) {
     // 为所有的url添加根目录
-    option.url = 'http://www.liulongbin.top:3007' + option.url;
+    option.url = 'http://api-breakingnews-web.itheima.net' + option.url;
     // 统一为有权限的接口，设置headers请求头
     if (option.url.indexOf('/my/') !== -1) {
         option.headers= {
